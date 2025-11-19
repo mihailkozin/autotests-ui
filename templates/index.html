@@ -5,15 +5,36 @@
     <title>Структура веб-страницы</title>
     <style>
         .h2-text {
-        color: red
+            color: red
+        }
+        .my-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .my-button:hover {
+            background-color: #45a049;
+        }
+        input[type="text"] {
+            background: gray
+        }
+        a:hover {
+            color: red
+        }
+        ul > li:nth-child(2) {
+            color: blue
         }
     </style>
 </head>
 <body>
-<div>
-<h1 id="h1-text">Структура веб-страницы</h1>
-<h2 class="h2-text">Красный октябрь</h2>
-<h3>07 ноября 1917 года</h3>
+<div class="python">
+    <h1 id="h1-text">Структура веб-страницы</h1>
+    <h1>h1-text2</h1>
+    <h2 class="h2-text">Красный октябрь</h2>
+    <h3>07 ноября 1917 года</h3>
 
 <p>Будьте вежливы и соблюдайте наши принципы сообщества. <span style="color: green">Пожалуйста</span>, не оставляйте решения и подсказки в комментариях,
     для этого есть отдельный форум.</p>
@@ -47,24 +68,29 @@
 <button class="my-button">Стильная кнопка</button>
 
 <style>
-.my-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-.my-button:hover {
-    background-color: #45a049;
-}
+
 </style>
 
 <label>
     <input type="checkbox" name="subscribe">
     Подписаться на рассылку
 </label>
-
+</div>
+<div class="java">
+    <a href="https://stepik.org/lesson/1450239/step/1?unit=1469208" target="_blank">Lesson2</ahref></a>
+    <h2 class="h2-text">Красный ноябрь</h2>
+    <div class="paragraf">
+        <p>1</p>
+        <p>2</p>
+        <p>3</p>
+        <p>4</p>
+        <h5>Заголовок</h5>
+        <ul>
+          <li>Элемент списка 1</li>
+          <li>Элемент списка 2</li>
+          <li>Элемент списка 3</li>
+        </ul>
+    </div>
 </div>
 </body>
 </html>
