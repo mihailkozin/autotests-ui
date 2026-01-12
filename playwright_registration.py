@@ -1,9 +1,13 @@
 from playwright.sync_api import sync_playwright, expect
 
+# Открываем браузер с использованием Playwright
 with sync_playwright() as playwright:
-    # Открываем браузер и создаем новую страницу
+    # Запускаем Chromium браузер в режиме просмотра
     browser = playwright.chromium.launch(headless=False)
-    page = browser.new_page()
+    # Создаем новый контекст браузера (новая сессия, которая изолирована от других)
+    context = browser.new_context()
+    # Открываем новую страницу в рамках контекста
+    page = context.new_page()
 
     # Переходим на страницу входа
     page.goto("https://nikita-filonov.github.io/qa-automation-engineer-ui-course/#/auth/registration")
@@ -28,6 +32,15 @@ with sync_playwright() as playwright:
     dashbord_toolbar_tittle = page.get_by_test_id('dashboard-toolbar-title-text')
     expect(dashbord_toolbar_tittle).to_be_visible()
     expect(dashbord_toolbar_tittle).to_have_text("Dashboard")
+
+    # Сохранение состояния сессии в файл
+    context.storage_state(path="browser-state.json")
+
+with sync_playwright() as playwright:
+    # Запускаем Chromium браузер в режиме просмотра
+    browser = playwright.chromium.launch(headless=False)
+    # Открываем новую страницу в рамках контекста
+    page = context.new_page()
 
 
 
