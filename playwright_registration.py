@@ -36,11 +36,7 @@ with sync_playwright() as playwright:
     # Сохранение состояния сессии в файл
     context.storage_state(path="browser-state.json")
 
-with sync_playwright() as playwright:
-    # Запускаем Chromium браузер в режиме просмотра
-    browser = playwright.chromium.launch(headless=False)
-    # Открываем новую страницу в рамках контекста
-    page = context.new_page()
+
 
 
 
