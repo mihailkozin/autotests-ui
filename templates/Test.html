@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Тестовый реферер</title>
+</head>
+<body>
+    <h1>Тестирование рефереров</h1>
+
+    <h3>Органический трафик:</h3>
+    <a href="https://dev.skillstaff.ru" target="_blank">
+        Из Google (organic)
+    </a><br>
+
+    <a href="https://dev.skillstaff.ru"
+       onclick="window.location.href='https://dev.skillstaff.ru'; return false;"
+       style="margin-top: 10px; display: inline-block;">
+        Из Яндекс (organic)
+    </a>
+
+    <h3>Рекламный трафик (с UTM):</h3>
+    <a href="https://dev.skillstaff.ru?utm_source=vk&utm_medium=cpc&utm_campaign=test" target="_blank">
+        Из VK рекламы
+    </a><br>
+
+    <a href="https://dev.skillstaff.ru?utm_source=email&utm_medium=email" target="_blank">
+        Из Email рассылки
+    </a>
+
+    <h3>Социальные сети:</h3>
+    <a href="https://dev.skillstaff.ru" target="_blank">
+        Из Facebook
+    </a><br>
+
+    <a href="https://dev.skillstaff.ru" target="_blank">
+        Из Instagram
+    </a>
+
+    <script>
+        // Для симуляции конкретных рефереров нужно разместить
+        // этот файл на веб-сервере и переходить с него
+        console.log('Открывайте ссылки в новой вкладке для тестирования');
+    </script>
+</body>
+</html>
